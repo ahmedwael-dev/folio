@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اكوا فوليو - قالب شخصي لعرض CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <style>
+        :root {
+    --primary: #141414;
+    --secondary: #060606;
+    --accent: #FF014F;
+    --accent-alt: #ff014dd9;
+    --text-gray: #9F9F9F;
+    --code-bg: #1a1a1a;
+    --border-color: #2d2d2d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rajdhani", sans-serif;
+    background-color: var(--primary);
+    color: #fff;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.intro {
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.3s;
+}
+
+.intro h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.intro p {
+    color: var(--text-gray);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.6s;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-gray);
+    padding: 1.5rem;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.link img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.link:hover {
+    background-color: var(--accent);
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 1, 79, 0.3);
+}
+
+.link:hover img {
+    transform: scale(1.05);
+}
+
+.link span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.link p {
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1>اكوا فوليو</h1>
+            <p>اكوا فوليو هو سيرة ذاتية شخصية تساعدك على عرض رحلتك المهنية ومهاراتك وإنجازاتك بطريقة حديثة وأنيقة.</p>
+        </div>
+        <div class="links">
+            <a href="https://folio-rtl.vercel.app/" target="_blank" class="link">
+                <img src="ar.png" alt="Arabic Version">
+                <span>RTL Version (عربي)</span>
+                <p>عرض القالب باللغة العربية</p>
+            </a>
+            <a href="https://folio-ltr.vercel.app/" target="_blank" class="link">
+                <img src="en.png" alt="English Version">
+                <span>LTR Version (English)</span>
+                <p>عرض القالب باللغة بالانجليزية</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
